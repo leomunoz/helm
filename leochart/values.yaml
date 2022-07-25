@@ -65,6 +65,14 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+healthcheck:
+  readinessProbe:
+    path: /readiness
+    port: http
+  livenessProbe:
+    path: /liveness
+    port: http
+
 autoscaling:
   enabled: false
   minReplicas: 1
