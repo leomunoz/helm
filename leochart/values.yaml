@@ -67,10 +67,10 @@ resources: {}
 
 healthcheck:
   readinessProbe:
-    path: /readiness
+    path: /
     port: http
   livenessProbe:
-    path: /liveness
+    path: /
     port: http
 
 autoscaling:
